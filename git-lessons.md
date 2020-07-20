@@ -25,3 +25,11 @@
     > git commit -m "1.txt file added"
 
     	HASH --> 6dee2302856a00217ba8346b9e600a6ad8318aab
+
+    > git remote add origin https://github.com/iamvickyav/mission-2021.git
+
+        Cloud URL to which code to be sent
+
+    > git push -u origin master
+
+        To send files to cloud
