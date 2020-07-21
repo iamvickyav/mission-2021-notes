@@ -1,35 +1,64 @@
 ## Git Lessons
 
-    > git config --global user.name "iamvickyav"
-    > git config --global user.email vickyavw.10@gmail.com
-    > git config --list
+### Setup Git
 
-    user.name
-    user.email
+#### Setup User name & Email
 
-    Go inside Project folder (git_sample)
+> git config --global user.name "iamvickyav"
+> git config --global user.email vickyavw.10@gmail.com
 
-    > git init
+#### To verify setup
 
-    	Start tracking files inside the folder
-    	also creates a .git folder (hidden)
+> git config --list
 
-    > .gitignore created & add target/ .idea/
+#### Enable Git in your Project
 
-    > git status
+Go inside Project folder in command prompt & run the following command
 
-    	untracked/tracked files, but not committed files
+> git init
 
-    > git add 1.txt
+- Created .git folder (hidden) inside your project
+- Git starts tracking files inside your project
 
-    > git commit -m "1.txt file added"
+#### Create .gitignore file
 
-    	HASH --> 6dee2302856a00217ba8346b9e600a6ad8318aab
+.gitignore is a file where we can specify what are all files/folders we want the git to stop tracking  
 
-    > git remote add origin https://github.com/iamvickyav/mission-2021.git
+> touch .gitignore
 
-        Cloud URL to which code to be sent
+- Add following in .gitignore
+``` 
+target/ 
+.idea/
+.classpath
+```
 
-    > git push -u origin master
+#### Check files in untracked & tracked state
 
-        To send files to cloud
+> git status
+
+This will only check & show status of files which are either in tracked or untracked state
+
+##### To Move file(s) from Untracked to Tracked state
+
+> git add 1.txt
+
+(or)
+
+> git add .
+
+##### To Move file(s) from Tracked state to Committed state
+
+> git commit -m "1st file added"
+
+git commit command will created a unique hash value for each of the commits E.g 6dee2302856a00217ba8346b9e600a6ad8318aab
+
+
+##### To Add a remote Github repo
+
+> git remote add origin https://github.com/iamvickyav/mission-2021.git
+
+    
+##### Push code to remote Github repo
+
+> git push -u origin master
