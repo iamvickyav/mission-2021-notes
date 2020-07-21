@@ -20,7 +20,7 @@ Include dependency under dependencies tag in **pom.xml**
 
 ## Convert JSON to Java Object
 
-- First create Java Object mapping your JSON
+- First create Java object mapping your JSON
 
 E.g. https://restcountries.eu/rest/v2/alpha/IN
 
