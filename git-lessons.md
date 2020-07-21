@@ -11,7 +11,11 @@
 
 > git config --list
 
-#### Enable Git in your Project
+<hr />
+
+### Enable Git in your Project
+
+#### Initialise Git
 
 Go inside Project folder in command prompt & run the following command
 
@@ -39,6 +43,10 @@ target/
 
 This will only check & show status of files which are either in tracked or untracked state
 
+<hr />
+
+### Changing state of files
+
 ##### To Move file(s) from Untracked to Tracked state
 
 > git add 1.txt
@@ -51,8 +59,13 @@ This will only check & show status of files which are either in tracked or untra
 
 > git commit -m "1st file added"
 
-git commit command will created a unique hash value for each of the commits E.g 6dee2302856a00217ba8346b9e600a6ad8318aab
+Git commit command will created a unique hash value for each of the commits
 
+E.g 6dee2302856a00217ba8346b9e600a6ad8318aab
+
+<hr />
+
+### Pushing code to remote
 
 ##### To Add a remote Github repo
 
