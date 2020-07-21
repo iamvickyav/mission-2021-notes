@@ -20,33 +20,36 @@ More details here - https://www.json.org/json-en.html
 
 ### JSON Example
 
-```
+```json
 {
-	"id": 1,
-	"name": "vicky",
-	"single": false,
-	"companies": ["TCS", "CTS"],
-	"address": {
-		"street": "Vinayak Street",
-		"area": "thiruvarur",
-		"state": "Tamilnadu",
-		"pincode": 610001
-	},
-	"bankdetails": [{
-		"ifscode": "HDFC0009077",
-		"accNumber": 512893618263912,
-		"branch": "Chennai branch"
-	}, {
-		"ifscode": "SBI0079343",
-		"accNumber": 6381289360129,
-		"branch": "Tiruvarur branch"
-	}]
+  "id": 1,
+  "name": "vicky",
+  "single": false,
+  "companies": ["TCS", "CTS"],
+  "address": {
+    "street": "Vinayak Street",
+    "area": "thiruvarur",
+    "state": "Tamilnadu",
+    "pincode": 610001
+  },
+  "bankdetails": [
+    {
+      "ifscode": "HDFC0009077",
+      "accNumber": 512893618263912,
+      "branch": "Chennai branch"
+    },
+    {
+      "ifscode": "SBI0079343",
+      "accNumber": 6381289360129,
+      "branch": "Tiruvarur branch"
+    }
+  ]
 }
 ```
 
 ### Equivalent Java object
 
-```
+```java
 class Person {
     Integer id;
     String name;
