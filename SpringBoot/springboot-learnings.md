@@ -74,6 +74,20 @@ class EmployeeService {
 
 ## To interact with DB
 
+### Changes in pom.xml
+
+```xml
+<dependency>
+    <groupId>mysql</groupId>
+	<artifactId>mysql-connector-java</artifactId>
+</dependency>
+
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-data-jdbc</artifactId>
+</dependency>
+```
+
 ### Changes in application.properties
 
 ```properties
