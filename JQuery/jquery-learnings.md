@@ -21,11 +21,82 @@
           $.ajax({
             type: 'GET',
             url: 'http://localhost:8080/employee/data/name/' + empId,
-            success: function (employee) {
-              alert(employee);
+            success: function (data) {
+              alert(data);
             },
             error: function (errorData) {
               alert(errorData.responseText);
+            },
+          });
+        });
+
+        $('#createEmp').click(function () {
+          var eId = $('#e-id').val();
+          var eName = $('#e-name').val();
+          var eDesignation = $('#e-designation').val();
+          var eDept = $('#e-dept').val();
+
+          var employeeData = {
+            id: eId,
+            name: eName,
+            role: {
+              designation: eDesignation,
+              dept: eDept,
+            },
+          };
+
+          $.ajax({
+            type: 'POST',
+            url: 'http://localhost:8080/employee/data/add',
+            data: JSON.stringify(employeeData),
+            contentType: 'application/json',
+            success: function (data) {
+              alert(data);
+            },
+            error: function (data) {
+              alert(data.responseText);
+            },
+          });
+        });
+        $('#updateEmp').click(function () {
+          var eId = $('#e-id').val();
+          var eName = $('#e-name').val();
+          var eDesignation = $('#e-designation').val();
+          var eDept = $('#e-dept').val();
+
+          var employeeData = {
+            id: eId,
+            name: eName,
+            role: {
+              designation: eDesignation,
+              dept: eDept,
+            },
+          };
+
+          $.ajax({
+            type: 'PUT',
+            url: 'http://localhost:8080/employee/data/update',
+            data: JSON.stringify(employeeData),
+            contentType: 'application/json',
+            success: function (data) {
+              alert(data);
+            },
+            error: function (data) {
+              alert(data.responseText);
+            },
+          });
+        });
+        $('#delete').click(function () {
+          var id = $('#emp-del-id').val();
+
+          $.ajax({
+            type: 'DELETE',
+            url: 'http://localhost:8080/employee/data/delete/' + id,
+            success: function (data) {
+              alert(data);
+            },
+            error: function (data) {
+              alert(data.responseText);
             },
           });
         });
@@ -34,6 +105,7 @@
   </head>
   <body>
     <div class="container">
+      <h2>Search For an Employee</h2>
       <p>Enter Id of the Employee</p>
       <input type="text" id="emp-id" />
       <br />
@@ -42,7 +114,33 @@
     </div>
     <br />
     <br />
-    <div id="result" class="container"></div>
+    <div class="container">
+      <h2>Delete an Employee</h2>
+      <p>Enter Id to delete Employee</p>
+      <input type="text" id="emp-del-id" />
+      <br />
+      <br />
+      <button id="delete">Submit</button>
+    </div>
+
+    <div class="container">
+      <h2>Create New Employee</h2>
+      <p>Enter Id</p>
+      <input type="text" id="e-id" />
+      <br />
+      <p>Enter Name</p>
+      <input type="text" id="e-name" />
+      <br />
+      <p>Enter Designation</p>
+      <input type="text" id="e-designation" />
+      <br />
+      <p>Enter Dept</p>
+      <input type="text" id="e-dept" />
+      <br />
+      <br />
+      <button id="createEmp">Create</button>
+      <button id="updateEmp">Update</button>
+    </div>
   </body>
 </html>
 ```
