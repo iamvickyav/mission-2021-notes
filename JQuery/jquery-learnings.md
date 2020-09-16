@@ -1,5 +1,26 @@
 # JQuery
 
+## Getting Value from URL
+
+```
+http://www.refulz.com:8082/index.php#tab2?foo=789
+
+Property    Result
+------------------------------------------
+host        www.refulz.com:8082
+hostname    www.refulz.com
+port        8082
+protocol    http:
+pathname    index.php
+href        http://www.refulz.com:8082/index.php#tab2
+hash        #tab2
+search      ?foo=789
+
+var x = $(location).attr('<property>');
+
+Ref : https://stackoverflow.com/a/14613849
+```
+
 ## JQuery Sample codes
 
 ```html
